@@ -1,6 +1,39 @@
-.search-bar {
+.searchBar {
   border: 1px solid #ccc;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   border-radius: 5px;
-  width: 200px;
+  width: 500px;
+}
+
+.custom-list-item {
+  max-width: 500px; /* Adjust the width as needed */
+  white-space: nowrap; /* Prevent wrapping of text within the item */
+  overflow: hidden; /* Hide any overflowing content */
+  text-overflow: ellipsis; /* Show ellipsis (...) for truncated text */
+  text-align: center;
+  transition: background-color 0.3s;
+  padding: 8px;
+}
+
+.custom-list-item:hover {
+  background-color: #007bff; /* Change the background color to blue on hover */
+  color: #fff; /* Change the text color to white on hover */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.list-group-item:hover {
+  background-color: #007bff; /* Change the background color to blue on hover */
+  color: #fff; /* Change the text color to white on hover */
+  cursor: pointer;
+}
+
+.scrollable-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.scrollable-list {
+  max-height: 400px;
+  /* Adjust the height as needed */
+  overflow-y: auto; /* Add vertical scrollbar when the list overflows */
 }

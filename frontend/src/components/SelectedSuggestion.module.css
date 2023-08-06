@@ -1,0 +1,17 @@
+.selectedSuggestionContainer {
+  border-radius: 40px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
