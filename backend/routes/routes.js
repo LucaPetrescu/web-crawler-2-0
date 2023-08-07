@@ -33,6 +33,7 @@ router.get("/executeCrawler", async (req, res) => {
 
     res.send({ message: "Crawling done!" }, response);
   } catch (error) {
+    console.log(error);
     console.log("eroare din server local " + error.message);
     res.status(500).send(`Error: ${error.message}`);
   }
