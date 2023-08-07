@@ -10,8 +10,8 @@ async function crawl(websites) {
   // const websites = [];
   console.log(websites);
 
-  // for (let i = 0; i < 10; i++) {
-  for (let i = 0; i < websites.length; i++) {
+  for (let i = 0; i < 10; i++) {
+    // for (let i = 0; i < websites.length; i++) {
     const baseUrl = `https://${websites[i]}`;
     try {
       const response = await axios.get(baseUrl);

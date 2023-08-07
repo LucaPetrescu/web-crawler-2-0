@@ -19,14 +19,19 @@ router.get("/executeCrawler", async (req, res) => {
     const allWebsites = await csvReader.readCSVSingleColumn(
       "C:/Users/luca.petrescu/Documents/web-crawler/assets/sample-websites.csv"
     );
-    for (let i = 0; i < allWebsites.length; i += batchSize) {
-      const batch = allWebsites.slice(i, i + batchSize);
-      const response = await axios.post(
-        "http://10.109.18.41:30000/startCrawler",
-        batch
-      );
-    }
-    res.send({ message: "Crawling done!" });
+    // for (let i = 0; i < allWebsites.length; i += batchSize) {
+    //   const batch = allWebsites.slice(i, i + batchSize);
+    //   const response = await axios.post(
+    //     "http://10.109.18.41:30000/startCrawler",
+    //     batch
+    //   );
+    // }
+    const response = await axios.post(
+      "http://10.109.18.41:30000/startCrawler",
+      allWebsites
+    );
+
+    res.send({ message: "Crawling done!" }, response);
   } catch (error) {
     console.log("eroare din server local " + error.message);
     res.status(500).send(`Error: ${error.message}`);
